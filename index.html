@@ -1,56 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Are you a cinephile</title>
 
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
   <header>
+
     <div id="logo">
       <img src="imagem/logo.png" alt="Logo d">
-      <h1>Are you a cinephile?</h1>
-      <h3>Descubra se você realmente entende de filmes e conhece os melhores de todos os tempos ou se seu gosto é duvidosos.</h3>
-    </div>
+    
+      <div id="introduction">
+          <h1>Are you a cinephile?</h1>
+          <h3>Descubra se você realmente entende de filmes e conhece os melhores.</h3>
+      </div>
+  </div>
+
     <div id="search">
-      <label for="searchInput">Escolha um filme</label>
-      <input id="searchInput" type="text">
+      <div id="input">
+        <label for="searchInput">Escolha um filme</label>
+        <input placeholder="Digite o nome dos filmes" id="searchInput" type="text">
+      </div>
       <button>Search</button>
     </div>
-    <div class="app">
-      <thead>
-        <th>
-          <tr>filme</tr>
-          <tr>categoria</tr>
-          <tr>year</tr>
-          <tr>pontuação</tr>
-        </th>
+  </header>
+
+  <main class="app">
+
+    <table>
+
+      <thead >
+        <tr id="table-head">
+          <th>movie</th>
+          <th>category</th>
+          <th>year</th>
+          <th>score</th>
+        </tr>
       </thead>
 
       <tbody>
-        <td>
-          <tr id="imgMovie">
-            <img src="https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg" alt="">
-            <a href="http://www.foxmovies.com/movies/fight-club">Fight Club</a>
-            <p>Clube da Luta</p>
-          </tr>
-          <tr id="typeMovie">Action</tr>
-          <tr id="yearMovie">2007</tr>
-          <tr id="scoreMovie">84%</tr>
-        </td>
+        <tr id="table-body">
+          <td id="name-movie">
+            <div id="img-movie">
+              <img src="https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg" alt="Capa do filme">
+            </div>
+            <div>
+              <a href="http://www.foxmovies.com/movies/fight-club" target="_blank">Fight Club 
+                <p>Clube da Luta</p>
+              </a>
+              
+            </div>
+          </td>
+          <td id="typeMovie">Action</td>
+          <td id="yearMovie">2007</td>
+          <td id="scoreMovie">84%</td>
+        </tr>
+
+        <tr id="table-body">
+          <td id="name-movie">
+            <div id="img-movie">
+              <img src="https://image.tmdb.org/t/p/w500//tH64gzAHDFg7EFcgfkkZyHdGM5P.jpg" alt="Capa do filme">
+            </div>
+            <div id="name">
+              <a href="https://www.themoviedb.org/movie/76341-mad-max-fury-road" target="_blank">Mad Max 
+                <p>Mad Max: Estrada da Fúria</p>
+              </a>
+
+              
+            </div>
+          </td>
+          <td id="typeMovie">Action</td>
+          <td id="yearMovie">2015</td>
+          <td id="scoreMovie">76%</td>
+        </tr>
       </tbody>
+      
+    </table>
 
-      <div>
-        <h1>Sua pontuação com cinéfilo é:</h1>
-        <h1>80%</h1>
-        <p>parabéns, você entende de filmes.</p>
-    </div>
-    </div>
 
-  </header>
+      <div id="result">
+        <div id="your-score">
+          <h1>Sua pontuação como cinéfilo é:</h1>
+          <button class=" button-score hide">Click Aqui</button>
+          <p class="score ">80</p>
+        </div>
+        <p class="final-sentence score-80">Parabéns, você entende muito de filmes. Merecia ser juíz do Oscar.</p>
+        <p class="final-sentence score-50 hide">Parabéns, você tem o nível Seção da Tarde!!!</p>
+        <p class="final-sentence score-20 hide">Seu nível é, por for não me convide para o cinema!!!</p>
+        <p class="final-sentence score-00 hide">Você seleciona a dedo os piores filmes, seria melhor ser cego!!!</p>
+      </div>
+    
+  </main>
+
+ 
   
   
 </body>
