@@ -63,7 +63,13 @@ body * {
   width: 60rem;
   margin: auto;
   background-color: white;
-  box-shadow: 0px 1px 3px 1px rgb(189, 185, 185);
+  box-shadow: 0px 0px 3px 1px rgb(189, 185, 185);
+  border-radius: .5rem;
+}
+
+#searchInput:focus {
+  outline: none;
+  border-radius: .5rem .5rem 0 0;
 }
 
 #search label {
@@ -75,8 +81,8 @@ body * {
 
 #search input {
   height: 5rem;
-  width: 50rem;
-  border-radius: .5rem 0 0 0;
+  width: 60rem;
+  border-radius: .5rem;
   font-size: 2rem;
   padding: 1rem;
 }
@@ -84,7 +90,7 @@ body * {
   
   color: black;
   width: 59.9rem;
-  background: rgba(255, 255, 255, 0.925);
+  background: rgba(255, 255, 255, 0.966);
   margin: auto;
   box-shadow: 0px 1px 3px 1px rgb(189, 185, 185);
   position: relative;
@@ -192,7 +198,7 @@ table {
   font-size: 1.4rem;
 }
 
-#table-body td {
+.table-body td {
   text-align: center;
   padding: 1rem;
 }
@@ -218,14 +224,19 @@ table {
 
 #your-score button {
   height: 8rem;
-  width: 8rem;
+  width: 16rem;
   border-radius: 0 .5rem .5rem 0;
   border-left: none;
   background-color: var(--bc-tb);
-  color: white;
+  color: red;
   font-size: 2rem;
   border-radius: 1rem;
+  cursor: pointer;
 
+}
+
+#your-score button:hover {
+  font-weight: 700;
 }
 
 #your-score p {
@@ -233,10 +244,11 @@ table {
   font-weight: bold;
   color: var(--fc-titule);
   border: 1px solid var(--bc-tb);
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   border-radius: 1rem;
   background: var(--bc-tb);
-  width: 8rem;
+  width: 16rem;
+  height: 8rem;
   margin: auto;
 }
 
