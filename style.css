@@ -51,11 +51,19 @@ body * {
 }
 
 #search {
+  height: 7rem;
+  padding: 1rem;
+  background-color: white;
+}
+
+#core-search {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 10rem;
+  width: 60rem;
+  margin: auto;
   background-color: white;
+  box-shadow: 0px 1px 3px 1px rgb(189, 185, 185);
 }
 
 #search label {
@@ -68,15 +76,48 @@ body * {
 #search input {
   height: 5rem;
   width: 50rem;
-  border-radius: .5rem 0 0 .5rem;
+  border-radius: .5rem 0 0 0;
   font-size: 2rem;
   padding: 1rem;
 }
+.list {
+  
+  color: black;
+  width: 59.9rem;
+  background: rgba(255, 255, 255, 0.925);
+  margin: auto;
+  box-shadow: 0px 1px 3px 1px rgb(189, 185, 185);
+  position: relative;
+  z-index: 1;
+  border-radius: 0 0 .5rem .5rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  position: relative;
+  color: var(--bc-header);
+  
+  width: 59.9rem;
+  margin: auto;
+  padding: .5rem;
+  font-size: 1.6rem;
+  list-style-type: none;
+  }
+ 
+  .option img {
+    height: 6rem;
+    border-radius: .5rem;
+    box-shadow: 0px 2px 5px 1px rgb(53, 52, 52);
+  }
+
+  
 
 #search button {
   height: 5rem;
   width: 10rem;
-  border-radius: 0 .5rem .5rem 0;
+  border-radius: 0 .5rem 0 0;
   border-left: none;
   background-color: var(--bc-tb);
   color: white;
@@ -209,4 +250,6 @@ table {
 .hide {
   display: none;
 }
+
+
 
