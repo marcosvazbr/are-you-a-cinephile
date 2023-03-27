@@ -65,7 +65,7 @@ function movieApi(name) {
         </td> 
         <td id="typeMovie" >${filme.release_date}</td>
         <td id="yearMovie" >${filme.vote_count}</td>
-        <td id="scoreMovie" >${filme.vote_average}</td>`
+        <td id="scoreMovie" >${filme.vote_average.toFixed(2)}</td>`
         
 
           document.querySelector('tbody').append(filmTr)
