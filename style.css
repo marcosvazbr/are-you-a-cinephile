@@ -104,6 +104,7 @@ body * {
   padding: .5rem;
   font-size: 1.6rem;
   list-style-type: none;
+  cursor: pointer;
   }
  
   .option img {
