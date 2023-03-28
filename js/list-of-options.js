@@ -1,4 +1,6 @@
 import { listOfMovies } from "./list-of-films.js"
+
+
 export function movieApi(name, ) {
   let films = []
   
@@ -23,10 +25,8 @@ function listConstructor(listOfOptions) {
 
     eachFilme.addEventListener('click', function (){
       cleanListOptions()
-      if(element.title != document.querySelector('.title').value || ){
-
-        listOfMovies(element)
-      }
+      
+      listOfMovies(element)
     })
   }) 
 }
