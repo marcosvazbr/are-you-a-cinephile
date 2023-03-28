@@ -1,26 +1,23 @@
+import { inputNameMovie } from "./options.js"
+
 let inputSearch = document.querySelector('#searchInput')
 let yourScoreButton = document.querySelector('.button-score')
 let yourScore = document.querySelector('.score')
 let yourFilmsScore = []
 
-inputSearch.addEventListener('keyup', function(e) {
-  console.log(e.key)
-  if(inputSearch.value.length >= 3) {
-    let nameMovie = inputSearch.value.replaceAll(" ", "+")
-    movieApi(nameMovie)
-  } else {
-    document.querySelector('ul').innerHTML = " "
-  }
-  console.log(inputSearch.value)
-  
-})
+inputSearch.addEventListener('keyup', inputNameMovie (inputSearch)) 
 
 function movieApi(name) {
   let films = []
   fetch(`https://api.themoviedb.org/3/search/movie?api_key=051e015fad5371e8aa5efffc2cf78b4b&query=${name}&language=pt-BR`)
-  .then( res => res.json())
+  .then((response) => {
+    if (response.ok) {
+      return response.json();
+    }
+    return Promise.reject(response); 
+  })
   .then(data => {
-    for (let i=0; i<=5; i++) {
+    for (let i=0; i<=data.results.length -1; i++) {
       films.push(data.results[i])
       }
     listConstructor(films)
