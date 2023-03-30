@@ -18,8 +18,8 @@ export function listOfMovies(filme) {
     
     </div>
   </td> 
-  <td id="typeMovie" >${filme.release_date}</td>
-  <td id="yearMovie" >${filme.vote_count}</td>
+  <td class="mobile tablet" id="typeMovie" >${filme.release_date}</td>
+  <td class="mobile" id="yearMovie" >${filme.vote_count}</td>
   <td id="scoreMovie" >${filme.vote_average.toFixed(2)}</td>`
   
     document.querySelector('tbody').append(filmTr)

@@ -30,11 +30,13 @@ body * {
 
 #logo {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 4rem;
   margin-bottom: 2.5rem;
-  width: 800px;
+  width: 98%;
   margin: 40px auto;
+  padding-left: 0.5rem;
 }
 
 #logo > img {
@@ -45,17 +47,20 @@ body * {
 #introduction h1 {
   margin-bottom: 1rem;
   font-weight: bold;
-  font-size: 6rem;
+  font-size: clamp(2rem, 2rem + 1.5vw, 8rem);
 }
 
-#introduction p {
+#introduction h3 {
   font-weight: 400;
+  font-size: clamp(1rem, 1rem + 1vw, 4rem);
 }
 
 #search {
   height: 7rem;
   padding: 1rem;
   background-color: white;
+  width: 100vw;
+
 }
 
 #core-search {
@@ -121,28 +126,15 @@ body * {
     box-shadow: 0px 2px 5px 1px rgb(53, 52, 52);
   }
 
-  
-
-#search button {
-  height: 5rem;
-  width: 10rem;
-  border-radius: 0 .5rem 0 0;
-  border-left: none;
-  background-color: var(--bc-tb);
-  color: white;
-  font-size: 2rem;
-}
-
 
 table {
   color: var(--fc-text);
-  width: 900px;
+  width: 90rem;
   margin: 4rem auto;
   background-color: var(--bc-tb);
   border-collapse: collapse;
   border-radius: 2rem;
-  
-  
+ 
 }
 
 #table-head {
@@ -191,13 +183,13 @@ table {
   text-decoration: none;
   color: var(--fc-titule);
   font-weight: bold;
-  font-size: 2rem;
+  font-size: clamp(1rem, 1rem + 1vw, 2rem);
 }
 
 #name-movie a p {
   margin-top: 1rem;
   color: var(--fc-text);
-  font-size: 1.4rem;
+  font-size: clamp(0.7rem, 1rem + 1vw, 1.4rem);
 }
 
 .table-body td {
@@ -223,6 +215,7 @@ table {
 #your-score h1 {
   color: var(--bc-header);
   margin-bottom: 3rem;
+  font-size: clamp(1.8rem, 1.8rem + 1.5vw, 8rem)
 }
 
 #your-score button {
@@ -257,7 +250,7 @@ table {
 
 .final-sentence {
   text-align: center;
-  font-size: 2rem;
+  font-size: clamp(1rem, 1rem + 1.5vw, 2rem);
   font-weight: bold;
   color: #0F2E33;
   
@@ -266,6 +259,42 @@ table {
 .hide {
   display: none;
 }
+@media (max-width: 925px) {
 
+  #core-search {
+    width: clamp(40rem, 90%, 60rem);
+  }
+
+  #search input {
+    width: clamp(40rem, 100%, 60rem);
+    margin: auto;
+  }
+
+  .tablet {
+    display: none;
+  }
+  #input-div {
+    width: clamp(40rem, 100%, 60rem); 
+  }
+
+  .list {
+    width: clamp(40rem, 89%, 59rem);
+  }
+
+  table {
+    width: clamp(40rem, 95%, 90rem);
+  }
+  #table-head th {
+    font-size: clamp(1rem, 1rem + 1.5vw, 1.5rem);
+    min-width: 9rem
+  }
+}
+
+@media (max-width: 600px) {
+  .mobile {
+    display: none;
+  }
+
+}
 
 
