@@ -215,7 +215,7 @@ table {
 #your-score h1 {
   color: var(--bc-header);
   margin-bottom: 3rem;
-  font-size: clamp(1.8rem, 1.8rem + 1.5vw, 8rem)
+  font-size: clamp(1.8rem, 1.8rem + 1.5vw, 7rem)
 }
 
 #your-score button {
