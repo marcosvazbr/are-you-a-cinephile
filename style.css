@@ -184,12 +184,16 @@ table {
   color: var(--fc-titule);
   font-weight: bold;
   font-size: clamp(1rem, 1rem + 1vw, 2rem);
+  display: block;
 }
 
 #name-movie a p {
   margin-top: 1rem;
   color: var(--fc-text);
   font-size: clamp(0.7rem, 1rem + 1vw, 1.4rem);
+}
+.title {
+  
 }
 
 .table-body td {
