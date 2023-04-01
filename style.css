@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family= Rancho & display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -16,14 +18,11 @@
 
 body {
   font-size: 1.6rem;
-  background: var(--bc-header);
+  background-image: radial-gradient( circle, black 40%, var(--bc-header) 60%);
   color: var(--fc-header);
   width: 100%;
-  
-  
-  
-  
 }
+
 body * {
   font-family: 'Roboto', sans-serif;
 }
@@ -59,7 +58,7 @@ body * {
   height: 7rem;
   padding: 1rem;
   background-color: white;
-  width: 100vw;
+  width: 100%;
 
 }
 
@@ -263,6 +262,48 @@ table {
 .hide {
   display: none;
 }
+.background {
+  width: 90rem;
+  margin: auto;
+  object-fit: fill;
+}
+
+.background h1 {
+  text-align: center;
+  font-family: 'Rancho', cursive;
+  font-size: clamp(2rem, 2rem + 1.5vw, 8rem);
+}
+.background img {
+  width: 90rem;
+  object-fit: fill;
+}
+
+footer {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  font-size: 2rem;
+}
+
+footer a {
+  cursor: pointer;
+  color: white;
+}
+
+footer a:first-child {
+  margin-right: 7px;
+}
+
+footer a:hover {
+  font-weight: bold;
+}
+
+footer p span {
+  font-size: 1.5rem;
+  
+}
 @media (max-width: 925px) {
 
   #core-search {
@@ -292,6 +333,18 @@ table {
     font-size: clamp(1rem, 1rem + 1.5vw, 1.5rem);
     min-width: 9rem
   }
+
+  .background {
+    width: clamp(40rem, 95%, 90rem);
+    object-fit: contain;
+  }
+
+  .background img {
+    width: clamp(40rem, 100%, 90rem);
+    object-fit: contain;
+  }
+
+
 }
 
 @media (max-width: 600px) {

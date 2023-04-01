@@ -4,6 +4,7 @@ let yourFilmsScore = []
 
 
 export function listOfMovies(filme) {
+  document.querySelector('.background').classList.add("hide")
   let filmTr = document.createElement('tr')
   filmTr.classList.add('table-body')
   filmTr.innerHTML = `
